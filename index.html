@@ -41,21 +41,19 @@
         <h2>jQuery Link: <a href="https://code.jquery.com/jquery-3.3.1.js" target="_blank">jQuery-3.3.1.js</a></h2>
         <h2>Bootstrap Link: <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap v3.3.7 download (zip)</a></h2>
         <h2>C Sharp</h2>
+        <h3>Step 1: Copy to terminal (then press ENTER)</h3>
         <div class="well">
           <p>cd ~</p>
           <p>cd desktop</p>
           <p>mkdir <span class="project-name"></span>.Solution</p>
           <p>cd <span class="project-name"></span>.Solution</p>
           <p>mkdir <span class="project-name"></span> <span class="project-name"></span>.Tests</p>
-          <p>mkdir <span class="project-name"></span>/Models <span class="project-name"></span>.Tests/ModelTests</p>
+          <p>mkdir <span class="project-name"></span>/Models <span class="project-name"></span>.Tests/ModelsTests</p>
           <p>touch README.md <span class="project-name"></span>/<span class="project-name"></span>.csproj <span class="project-name"></span>.Tests/<span class="project-name"></span>.Tests.csproj</p>
-          <p>touch <span class="project-name"></span>/Models/<span class="project-name"></span>.cs <span class="project-name"></span>/ModelsTests/<span class="project-name"></span>Test.cs</p>
-          <p>cd <span class="project-name"></span></p>
-          <p>git init</p>
-          <p>git pair <span class="partner1"></span> <span class="partner2"></span></p>
+          <p>touch <span class="project-name"></span>/Models/<span class="project-name"></span>.cs <span class="project-name"></span>.Tests/ModelsTests/<span class="project-name"></span>Test.cs</p>
           <p>atom .</p>
         </div>
-        <h3>For <span class="project-name"></span>.csproj Paste this:</h3>
+        <h3>Step 2: For <span class="project-name"></span>.csproj Paste this (and SAVE):</h3>
 
 <pre>
   <code class="prettyprint lang-csproj prettyprinted" style="">
@@ -68,7 +66,7 @@
 <span class="pln"></span><span class="tag">&lt;/Project&gt;</span>
   </code>
 </pre>
-  <h3>For <span class="project-name"></span>.Tests.csproj Paste this:</h3>
+  <h3>Step 3: For <span class="project-name"></span>.Tests.csproj Paste this (and SAVE):</h3>
 <pre>
   <code class="prettyprint lang-csproj prettyprinted" style="">
 <span class="tag">&lt;Project</span><span class="pln"> </span><span class="atn">Sdk</span><span class="pun">=</span><span class="atv">"Microsoft.NET.Sdk"</span><span class="tag">&gt;</span><span class="pln">
@@ -88,6 +86,57 @@
 </span><span class="tag">&lt;/Project&gt;</span>
   </code>
 </pre>
+
+      <h3>Step 4: Copy to <span class="project-name"></span>Test.cs (and SAVE):</h3>
+<pre>
+  <code class="prettyprint lang-csharp prettyprinted" style="">
+<span class="kwd">using</span><span class="pln"> </span><span class="typ">Microsoft</span><span class="pun">.</span><span class="typ">VisualStudio</span><span class="pun">.</span><span class="typ">TestTools</span><span class="pun">.</span><span class="typ">UnitTesting</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ"><span class="project-name"></span></span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">namespace</span><span class="pln"> </span><span class="typ"><span class="project-name"></span></span><span class="pun">.</span><span class="typ">Tests</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="pun">[</span><span class="typ">TestClass</span><span class="pun">]</span><span class="pln">
+  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ"><span class="project-name"></span>Test</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">[</span><span class="typ">TestMethod</span><span class="pun">]</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">ExampleTest_True</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="com">// eventually your testing code will go here</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span>
+  </code>
+</pre>
+      <h3>Step 5: Copy to <span class="project-name"></span>.cs (and SAVE):</h3>
+<pre>
+  <code class="prettyprint lang-csharp prettyprinted" style="">
+<span class="kwd">namespace</span><span class="pln"> </span><span class="typ"><span class="project-name"></span></span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ"><span class="project-name"></span></span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">bool</span><span class="pln"> </span><span class="typ">ExampleTest</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> year</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="com">// logic will go here</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span>
+  </code>
+</pre>
+
+      <h3>Step 6: Copy to terminal</h3>
+      <div class="well">
+        <p>cd ~</p>
+        <p>cd desktop/<span class="project-name"></span>.Solution/<span class="project-name"></span></p>
+        <p>dotnet restore</p>
+        <p>cd ../<span class="project-name"></span>.Tests</p>
+        <p>dotnet restore</p>
+        <p>cd ..</p>
+        <p>git init</p>
+        <p>git pair <span class="partner1"></span> <span class="partner2"></span></p>
+        <p>git add .</p>
+        <p>git-pair-commit -m "Create Initial Project Folder."</p>
+
       </div>
     </div>
   </body>
