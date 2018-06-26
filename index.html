@@ -40,7 +40,54 @@
         </div>
         <h2>jQuery Link: <a href="https://code.jquery.com/jquery-3.3.1.js" target="_blank">jQuery-3.3.1.js</a></h2>
         <h2>Bootstrap Link: <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap v3.3.7 download (zip)</a></h2>
+        <h2>C Sharp</h2>
+        <div class="well">
+          <p>cd ~</p>
+          <p>cd desktop</p>
+          <p>mkdir <span class="project-name"></span>.Solution</p>
+          <p>cd <span class="project-name"></span>.Solution</p>
+          <p>mkdir <span class="project-name"></span> <span class="project-name"></span>.Tests</p>
+          <p>mkdir <span class="project-name"></span>/Models <span class="project-name"></span>.Tests/ModelTests</p>
+          <p>touch README.md <span class="project-name"></span>/<span class="project-name"></span>.csproj <span class="project-name"></span>.Tests/<span class="project-name"></span>.Tests.csproj</p>
+          <p>touch <span class="project-name"></span>/Models/<span class="project-name"></span>.cs <span class="project-name"></span>/ModelsTests/<span class="project-name"></span>Test.cs</p>
+          <p>cd <span class="project-name"></span></p>
+          <p>git init</p>
+          <p>git pair <span class="partner1"></span> <span class="partner2"></span></p>
+          <p>atom .</p>
+        </div>
+        <h3>For <span class="project-name"></span>.csproj Paste this:</h3>
 
+<pre>
+  <code class="prettyprint lang-csproj prettyprinted" style="">
+<span class="tag">&lt;Project</span><span class="pln"> </span><span class="atn">Sdk</span><span class="pun">=</span><span class="atv">"Microsoft.NET.Sdk"</span><span class="tag">&gt;</span><span class="pln">
+
+  </span><span class="tag">&lt;PropertyGroup&gt;</span><span class="pln">
+    </span><span class="tag">&lt;TargetFramework&gt;</span><span class="pln">netcoreapp1.1</span><span class="tag">&lt;/TargetFramework&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/PropertyGroup&gt;</span>
+
+<span class="pln"></span><span class="tag">&lt;/Project&gt;</span>
+  </code>
+</pre>
+  <h3>For <span class="project-name"></span>.Tests.csproj Paste this:</h3>
+<pre>
+  <code class="prettyprint lang-csproj prettyprinted" style="">
+<span class="tag">&lt;Project</span><span class="pln"> </span><span class="atn">Sdk</span><span class="pun">=</span><span class="atv">"Microsoft.NET.Sdk"</span><span class="tag">&gt;</span><span class="pln">
+
+  </span><span class="tag">&lt;PropertyGroup&gt;</span><span class="pln">
+    </span><span class="tag">&lt;TargetFramework&gt;</span><span class="pln">netcoreapp1.1</span><span class="tag">&lt;/TargetFramework&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/PropertyGroup&gt;</span><span class="pln">
+  </span><span class="tag">&lt;ItemGroup&gt;</span><span class="pln">
+    </span><span class="tag">&lt;PackageReference</span><span class="pln"> </span><span class="atn">Include</span><span class="pun">=</span><span class="atv">"Microsoft.NET.Test.Sdk"</span><span class="pln"> </span><span class="atn">Version</span><span class="pun">=</span><span class="atv">"15.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;PackageReference</span><span class="pln"> </span><span class="atn">Include</span><span class="pun">=</span><span class="atv">"MSTest.TestAdapter"</span><span class="pln"> </span><span class="atn">Version</span><span class="pun">=</span><span class="atv">"1.2"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;PackageReference</span><span class="pln"> </span><span class="atn">Include</span><span class="pun">=</span><span class="atv">"MSTest.TestFramework"</span><span class="pln"> </span><span class="atn">Version</span><span class="pun">=</span><span class="atv">"1.2"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/ItemGroup&gt;</span><span class="pln">
+
+  </span><span class="tag">&lt;ItemGroup&gt;</span><span class="pln">
+    </span><span class="tag">&lt;ProjectReference</span><span class="pln"> </span><span class="atn">Include</span><span class="pun">=</span><span class="atv">"..\<span class="project-name"></span>\<span class="project-name"></span>.csproj"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/ItemGroup&gt;</span><span class="pln">
+</span><span class="tag">&lt;/Project&gt;</span>
+  </code>
+</pre>
       </div>
     </div>
   </body>
