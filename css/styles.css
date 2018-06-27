@@ -1,3 +1,13 @@
 .well p {
   margin-bottom: -4px;
 }
+.initial-hidden {
+  display:none;
+}
+div[class*="-click"]:hover {
+  cursor: pointer;
+  color: red;
+}
+div[class*="-click"] {
+  font-size: 20px;
+}

@@ -12,34 +12,87 @@
       <h1>New project template</h1>
       <div class="new-project-folder">
         <form id="form-1">
+          <div class="radio pairs-click">
+            <label>
+              <input type="radio" name="template" value="pairs" checked>
+              .pairs
+            </label>
+          </div>
+          <div class="radio javascript-click">
+            <label>
+              <input type="radio" name="template" value="javascript">
+              Javascript
+            </label>
+          </div>
+          <div class="radio csharp-click">
+            <label>
+              <input type="radio" name="template" value="csharp">
+              C Sharp
+            </label>
+          </div>
           <div class="form-group">
-            <label for="project-name">Enter project name:</label>
+            <label for="project-name">Enter project name (Note: C Sharp projects usually start with a capital letter):</label>
             <input id="project-name" class="form-control" type="text">
           </div>
-          <div class="form-group">
-            <label for="partner1-initials">Enter partner 1 initials:</label>
-            <input id="partner1-initials" class="form-control" type="text">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="partner1-name">Enter partner 1 name (First and Last):</label>
+              <input id="partner1-name" class="form-control" type="text">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="partner1-email">Enter partner 1 email:</label>
+              <input id="partner1-email" class="form-control" type="text">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="partner2-initials">Enter partner 2 initials:</label>
-            <input id="partner2-initials" class="form-control" type="text">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="partner2-name">Enter partner 2 name (First and Last):</label>
+              <input id="partner2-name" class="form-control" type="text">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="partner2-email">Enter partner 2 email:</label>
+              <input id="partner2-email" class="form-control" type="text">
+            </div>
           </div>
           <button type="submit" class="btn btn-success">Populate fields</button>
         </form>
-        <h2>New project folder</h2>
-        <div class="well">
-          <p>cd ~</p>
-          <p>cd desktop</p>
-          <p>mkdir <span class="project-name"></span></p>
-          <p>cd <span class="project-name"></span></p>
-          <p>mkdir css js img</p>
-          <p>touch index.html js/scripts.js css/styles.css README.md</p>
-          <p>git init</p>
-          <p>git pair <span class="partner1"></span> <span class="partner2"></span></p>
-          <p>atom .</p>
+        <div class="initial-hidden pairs-template">
+          <h2>.pairs file template</h2>
+          <h3>Step 1: Copy to terminal</h3>
+          <div class="well">
+            <p>cd ~</p>
+            <p>touch .pairs</p>
+            <p>atom .pairs</p>
+          </div>
+          <h3>Step 2: Copy to .pairs</h3>
+          <pre>
+            <code class="prettyprint lang-text prettyprinted" style="">
+<span>pairs:</span>
+  <span class="partner1"></span><span>: </span><span class="partner1-fullname"></span>
+  <span class="partner2"></span><span>: </span><span class="partner2-fullname"></span>
+<span>email: </span>
+  <span class="partner1"></span><span>: </span><span class="partner-email1"></span>
+  <span class="partner2"></span><span>: </span><span class="partner-email2"></span>
+          </code>
+          </pre>
         </div>
-        <h2>jQuery Link: <a href="https://code.jquery.com/jquery-3.3.1.js" target="_blank">jQuery-3.3.1.js</a></h2>
-        <h2>Bootstrap Link: <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap v3.3.7 download (zip)</a></h2>
+        <div class="initial-hidden javascript">
+          <h2>JavaScript: New project folder</h2>
+          <div class="well">
+            <p>cd ~</p>
+            <p>cd desktop</p>
+            <p>mkdir <span class="project-name"></span></p>
+            <p>cd <span class="project-name"></span></p>
+            <p>mkdir css js img</p>
+            <p>touch index.html js/scripts.js css/styles.css README.md</p>
+            <p>git init</p>
+            <p>git pair <span class="partner1"></span> <span class="partner2"></span></p>
+            <p>atom .</p>
+          </div>
+          <h2>jQuery Link: <a href="https://code.jquery.com/jquery-3.3.1.js" target="_blank">jQuery-3.3.1.js</a></h2>
+          <h2>Bootstrap Link: <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap v3.3.7 download (zip)</a></h2>
+        </div>
+        <div class="initial-hidden CSharp">
         <h2>C Sharp</h2>
         <h3>Step 1: Copy to terminal (then press ENTER)</h3>
         <div class="well">
@@ -57,86 +110,139 @@
 
 <pre>
   <code class="prettyprint lang-csproj prettyprinted" style="">
-<span class="tag">&lt;Project</span><span class="pln"> </span><span class="atn">Sdk</span><span class="pun">=</span><span class="atv">"Microsoft.NET.Sdk"</span><span class="tag">&gt;</span><span class="pln">
+<span>&lt;Project</span><span> </span><span>Sdk</span><span>=</span><span>"Microsoft.NET.Sdk"</span><span>&gt;</span><span>
 
-  </span><span class="tag">&lt;PropertyGroup&gt;</span><span class="pln">
-    </span><span class="tag">&lt;TargetFramework&gt;</span><span class="pln">netcoreapp1.1</span><span class="tag">&lt;/TargetFramework&gt;</span><span class="pln">
-  </span><span class="tag">&lt;/PropertyGroup&gt;</span>
+  </span><span>&lt;PropertyGroup&gt;</span><span>
+    </span><span>&lt;TargetFramework&gt;</span><span>netcoreapp1.1</span><span>&lt;/TargetFramework&gt;</span><span>
+  </span><span>&lt;/PropertyGroup&gt;</span>
 
-<span class="pln"></span><span class="tag">&lt;/Project&gt;</span>
+<span></span><span>&lt;/Project&gt;</span>
   </code>
 </pre>
   <h3>Step 3: For <span class="project-name"></span>.Tests.csproj Paste this (and SAVE):</h3>
 <pre>
   <code class="prettyprint lang-csproj prettyprinted" style="">
-<span class="tag">&lt;Project</span><span class="pln"> </span><span class="atn">Sdk</span><span class="pun">=</span><span class="atv">"Microsoft.NET.Sdk"</span><span class="tag">&gt;</span><span class="pln">
+<span>&lt;Project</span><span> </span><span>Sdk</span><span>=</span><span>"Microsoft.NET.Sdk"</span><span>&gt;</span><span>
 
-  </span><span class="tag">&lt;PropertyGroup&gt;</span><span class="pln">
-    </span><span class="tag">&lt;TargetFramework&gt;</span><span class="pln">netcoreapp1.1</span><span class="tag">&lt;/TargetFramework&gt;</span><span class="pln">
-  </span><span class="tag">&lt;/PropertyGroup&gt;</span><span class="pln">
-  </span><span class="tag">&lt;ItemGroup&gt;</span><span class="pln">
-    </span><span class="tag">&lt;PackageReference</span><span class="pln"> </span><span class="atn">Include</span><span class="pun">=</span><span class="atv">"Microsoft.NET.Test.Sdk"</span><span class="pln"> </span><span class="atn">Version</span><span class="pun">=</span><span class="atv">"15.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
-    </span><span class="tag">&lt;PackageReference</span><span class="pln"> </span><span class="atn">Include</span><span class="pun">=</span><span class="atv">"MSTest.TestAdapter"</span><span class="pln"> </span><span class="atn">Version</span><span class="pun">=</span><span class="atv">"1.2"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
-    </span><span class="tag">&lt;PackageReference</span><span class="pln"> </span><span class="atn">Include</span><span class="pun">=</span><span class="atv">"MSTest.TestFramework"</span><span class="pln"> </span><span class="atn">Version</span><span class="pun">=</span><span class="atv">"1.2"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
-  </span><span class="tag">&lt;/ItemGroup&gt;</span><span class="pln">
+  </span><span>&lt;PropertyGroup&gt;</span><span>
+    </span><span>&lt;TargetFramework&gt;</span><span>netcoreapp1.1</span><span>&lt;/TargetFramework&gt;</span><span>
+  </span><span>&lt;/PropertyGroup&gt;</span><span>
+  </span><span>&lt;ItemGroup&gt;</span><span>
+    </span><span>&lt;PackageReference</span><span> </span><span>Include</span><span>=</span><span>"Microsoft.NET.Test.Sdk"</span><span> </span><span>Version</span><span>=</span><span>"15.0.0"</span><span> </span><span>/&gt;</span><span>
+    </span><span>&lt;PackageReference</span><span> </span><span>Include</span><span>=</span><span>"MSTest.TestAdapter"</span><span> </span><span>Version</span><span>=</span><span>"1.2"</span><span> </span><span>/&gt;</span><span>
+    </span><span>&lt;PackageReference</span><span> </span><span>Include</span><span>=</span><span>"MSTest.TestFramework"</span><span> </span><span>Version</span><span>=</span><span>"1.2"</span><span> </span><span>/&gt;</span><span>
+  </span><span>&lt;/ItemGroup&gt;</span><span>
 
-  </span><span class="tag">&lt;ItemGroup&gt;</span><span class="pln">
-    </span><span class="tag">&lt;ProjectReference</span><span class="pln"> </span><span class="atn">Include</span><span class="pun">=</span><span class="atv">"..\<span class="project-name"></span>\<span class="project-name"></span>.csproj"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
-  </span><span class="tag">&lt;/ItemGroup&gt;</span><span class="pln">
-</span><span class="tag">&lt;/Project&gt;</span>
+  </span><span>&lt;ItemGroup&gt;</span><span>
+    </span><span>&lt;ProjectReference</span><span> </span><span>Include</span><span>=</span><span>"..\<span class="project-name"></span>\<span class="project-name"></span>.csproj"</span><span> </span><span>/&gt;</span><span>
+  </span><span>&lt;/ItemGroup&gt;</span><span>
+</span><span>&lt;/Project&gt;</span>
   </code>
 </pre>
 
       <h3>Step 4: Copy to <span class="project-name"></span>Test.cs (and SAVE):</h3>
 <pre>
   <code class="prettyprint lang-csharp prettyprinted" style="">
-<span class="kwd">using</span><span class="pln"> </span><span class="typ">Microsoft</span><span class="pun">.</span><span class="typ">VisualStudio</span><span class="pun">.</span><span class="typ">TestTools</span><span class="pun">.</span><span class="typ">UnitTesting</span><span class="pun">;</span><span class="pln">
-</span><span class="kwd">using</span><span class="pln"> </span><span class="typ"><span class="project-name"></span></span><span class="pun">;</span><span class="pln">
+<span>using</span><span> </span><span>Microsoft</span><span>.</span><span>VisualStudio</span><span>.</span><span>TestTools</span><span>.</span><span>UnitTesting</span><span>;</span><span>
+</span><span>using</span><span> </span><span><span class="project-name"></span></span><span>;</span><span>
 
-</span><span class="kwd">namespace</span><span class="pln"> </span><span class="typ"><span class="project-name"></span></span><span class="pun">.</span><span class="typ">Tests</span><span class="pln">
-</span><span class="pun">{</span><span class="pln">
-  </span><span class="pun">[</span><span class="typ">TestClass</span><span class="pun">]</span><span class="pln">
-  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ"><span class="project-name"></span>Test</span><span class="pln">
-  </span><span class="pun">{</span><span class="pln">
-    </span><span class="pun">[</span><span class="typ">TestMethod</span><span class="pun">]</span><span class="pln">
-    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">ExampleTest_True</span><span class="pun">()</span><span class="pln">
-    </span><span class="pun">{</span><span class="pln">
-      </span><span class="com">// eventually your testing code will go here</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span>
+</span><span>namespace</span><span> </span><span><span class="project-name"></span></span><span>.</span><span>Tests</span><span>
+</span><span>{</span><span>
+  </span><span>[</span><span>TestClass</span><span>]</span><span>
+  </span><span>public</span><span> </span><span>class</span><span> </span><span><span class="project-name"></span>Test</span><span>
+  </span><span>{</span><span>
+    </span><span>[</span><span>TestMethod</span><span>]</span><span>
+    </span><span>public</span><span> </span><span>void</span><span> </span><span>ExampleTest_True</span><span>()</span><span>
+    </span><span>{</span><span>
+      </span><span>// eventually your testing code will go here</span><span>
+    </span><span>}</span><span>
+  </span><span>}</span><span>
+</span><span>}</span>
   </code>
 </pre>
       <h3>Step 5: Copy to <span class="project-name"></span>.cs (and SAVE):</h3>
 <pre>
   <code class="prettyprint lang-csharp prettyprinted" style="">
-<span class="kwd">namespace</span><span class="pln"> </span><span class="typ"><span class="project-name"></span></span><span class="pln">
-</span><span class="pun">{</span><span class="pln">
-</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ"><span class="project-name"></span></span><span class="pln">
-  </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">bool</span><span class="pln"> </span><span class="typ">ExampleTest</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> year</span><span class="pun">)</span><span class="pln">
-    </span><span class="pun">{</span><span class="pln">
-      </span><span class="com">// logic will go here</span><span class="pln">
-      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span>
+<span>namespace</span><span> </span><span><span class="project-name"></span></span><span>
+</span><span>{</span><span>
+</span><span>public</span><span> </span><span>class</span><span> </span><span><span class="project-name"></span></span><span>
+  </span><span>{</span><span>
+  </span><span>public</span><span> </span><span>bool</span><span> </span><span>ExampleTest</span><span>(</span><span>int</span><span> year</span><span>)</span><span>
+    </span><span>{</span><span>
+      </span><span>// logic will go here</span><span>
+      </span><span>return</span><span> </span><span>false</span><span>;</span><span>
+    </span><span>}</span><span>
+  </span><span>}</span><span>
+</span><span>}</span>
   </code>
 </pre>
 
       <h3>Step 6: Copy to terminal</h3>
-      <div class="well">
-        <p>cd ~</p>
-        <p>cd desktop/<span class="project-name"></span>.Solution/<span class="project-name"></span></p>
-        <p>dotnet restore</p>
-        <p>cd ../<span class="project-name"></span>.Tests</p>
-        <p>dotnet restore</p>
-        <p>cd ..</p>
-        <p>git init</p>
-        <p>git pair <span class="partner1"></span> <span class="partner2"></span></p>
-        <p>git add .</p>
-        <p>git-pair-commit -m "Create Initial Project Folder."</p>
+        <div class="well">
+          <p>cd ~</p>
+          <p>cd desktop/<span class="project-name"></span>.Solution/<span class="project-name"></span></p>
+          <p>dotnet restore</p>
+          <p>cd ../<span class="project-name"></span>.Tests</p>
+          <p>dotnet restore</p>
+          <p>cd ..</p>
+          <p>git init</p>
+          <p>git pair <span class="partner1"></span> <span class="partner2"></span></p>
+          <p>git add .</p>
+          <p>git-pair-commit -m "Create Initial Project Folder."</p>
+        </div>
+      </div>
+      <div class=" readme-template">
+        <pre>
+          <code>
+# _Ping Pong_
 
+#### _A Website that determines whether an entered year is a leap year, June 26, 2018_
+
+#### By _**Nick Rogers and Colin Bates**_
+
+## Description
+
+_This website was created to Ping Pong.
+Specs:
+  PingPong:
+  1. Accept an inputted number
+    Example input: 100
+    Example output: yes
+  2. Add from 1 to that number and display list
+    Example input: 3
+    Example output: 1,2,3
+  3. Identify 3's, 5's, and multiples of both
+    Example input: 3
+    Example output: true
+  4. Replace 3 with ping, 5 with pong, and 15 with PingPong
+    Example input: 15
+    example output: ping-pong
+_
+
+## Setup/Installation Requirements
+
+* _Double click the icon in your folder_
+
+## Known Bugs
+
+_No known bugs._
+
+## Support and contact details
+
+_Nick Rogers email: amellocello@msn.com_
+_Colin Bates email: dragonflylord@gmail.com_
+
+## Technologies Used
+
+_Created with Atom editor.  Use any browser to view._
+
+### License
+
+*No license required*
+
+Copyright (c) 2018 **_Nick Rogers and Colin Bates_**
+          </code>
+        </pre>
       </div>
     </div>
   </body>
