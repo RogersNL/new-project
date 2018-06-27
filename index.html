@@ -30,6 +30,12 @@
               C Sharp
             </label>
           </div>
+          <div class="radio readme-click">
+            <label>
+              <input type="radio" name="template" value="readme">
+              README
+            </label>
+          </div>
           <div class="form-group">
             <label for="project-name">Enter project name (Note: C Sharp projects usually start with a capital letter):</label>
             <input id="project-name" class="form-control" type="text">
@@ -191,32 +197,21 @@
           <p>git-pair-commit -m "Create Initial Project Folder."</p>
         </div>
       </div>
-      <div class=" readme-template">
+      <div class="initial-hidden readme-template">
+        <h2>README Template</h2>
         <pre>
           <code>
-# _Ping Pong_
+# _<span class="project-name"></span>_
 
-#### _A Website that determines whether an entered year is a leap year, June 26, 2018_
+#### _A Website that ... *FILL THIS OUT*, *UPDATE* June 26, 2018_
 
-#### By _**Nick Rogers and Colin Bates**_
+#### By _**<span class="partner1-fullname"></span> and <span class="partner2-fullname"></span>**_
 
 ## Description
 
-_This website was created to Ping Pong.
+_This website was created to... *FILL THIS OUT*.
 Specs:
-  PingPong:
-  1. Accept an inputted number
-    Example input: 100
-    Example output: yes
-  2. Add from 1 to that number and display list
-    Example input: 3
-    Example output: 1,2,3
-  3. Identify 3's, 5's, and multiples of both
-    Example input: 3
-    Example output: true
-  4. Replace 3 with ping, 5 with pong, and 15 with PingPong
-    Example input: 15
-    example output: ping-pong
+1. *FILL THIS OUT*
 _
 
 ## Setup/Installation Requirements
@@ -229,8 +224,8 @@ _No known bugs._
 
 ## Support and contact details
 
-_Nick Rogers email: amellocello@msn.com_
-_Colin Bates email: dragonflylord@gmail.com_
+_<span class="partner1-fullname"></span> email: <span class="partner-email1"></span>_
+_<span class="partner2-fullname"></span> email: <span class="partner-email2"></span>_
 
 ## Technologies Used
 
@@ -240,7 +235,7 @@ _Created with Atom editor.  Use any browser to view._
 
 *No license required*
 
-Copyright (c) 2018 **_Nick Rogers and Colin Bates_**
+Copyright (c) 2018 **_<span class="partner1-fullname"></span> and <span class="partner2-fullname"></span>_**
           </code>
         </pre>
       </div>

@@ -38,6 +38,11 @@ $(document).ready(function(){
     if (inputtedTemplate === "pairs" && (inputtedPartner1Email === "" || inputtedPartner2Email === "")) {
       alert("nice email :thinking:");
     }
+    if (inputtedTemplate === "readme") {
+      if (inputtedProjectName === "" || inputtedPartner1Name === "" || inputtedPartner2Name === "" || inputtedPartner1Email === "" || inputtedPartner2Email === "") {
+        alert("for best results, fill all fields. thxxxx")
+      }
+    }
     //Populate fields
     $(".project-name").text(inputtedProjectName);
     $(".partner1-fullname").text(inputtedPartner1Name);
@@ -52,14 +57,22 @@ $(document).ready(function(){
       $(".pairs-template").fadeIn();
       $(".javascript").hide();
       $(".CSharp").hide();
+      $(".readme-template").hide();
     } else if (inputtedTemplate === "javascript") {
       $(".pairs-template").hide();
       $(".javascript").fadeIn();
       $(".CSharp").hide();
+      $(".readme-template").hide();
     } else if (inputtedTemplate === "csharp") {
       $(".pairs-template").hide();
       $(".javascript").hide();
       $(".CSharp").fadeIn();
+      $(".readme-template").hide();
+    } else if (inputtedTemplate === "readme") {
+      $(".pairs-template").hide();
+      $(".javascript").hide();
+      $(".CSharp").hide();
+      $(".readme-template").fadeIn();
     } else {
       alert("Idk how you managed to get this option...");
     }

@@ -22,6 +22,7 @@ _
 ## Setup/Installation Requirements
 
 * _Double click the icon in your folder_
+  _Check out the site here: https://RogersNL.github.io/new-project/_
 
 ## Known Bugs
 
